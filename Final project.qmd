@@ -12,9 +12,21 @@ Quarto enables you to weave together content and executable code into a finished
 
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
+#Initial data. 
+
 ```{r}
+# Earthquake data 
 url <- "https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2011-03-11&endtime=2011-06-11&minlatitude=35&maxlatitude=41&minlongitude=140&maxlongitude=145&minmagnitude=2.5"
 quakes <- read.csv(url)
+
+# Population data from 2010 
+#library(tiff)
+
+pop <- readTIFF("jpn_pd_2010_1km.tif")
+
+
+
+
 ```
 
 You can add options to executable code like this
